@@ -12,5 +12,6 @@
     state: "{{ php_fpm_handler_state }}"
   when:
     - php_enable_php_fpm
+    - php_service_management
     - php_fpm_state == 'started'
     - not ansible_check_mode
